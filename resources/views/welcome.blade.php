@@ -10,19 +10,19 @@
 
     <title>Bcrypt Generator | Nerd Project</title>
   </head>
-  <body class="bg-dark">
+  <body class="bg-dark d-flex align-items-center" style="min-height: 100vh">
     <div class="container">
         <div class="text-center">
-            <div class="card mt-5">
+            <div class="card py-4">
                 <h1>Bcrypt Generator v.1</h1>
                 <span><small>by <a href="https://instagram.com/nicodwi_k" target="_blank">Nico Dwi K</a> | Nerd Project</small></span>
-                <div class="card-body">
+                <div class="card-body mt-5">
                     <form action="{{route('hash')}}" method="POST">
                         @csrf
                         <div class="form-group">
                             <input type="text" class="form-control" name="text" placeholder="Input Text">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Hash</button>
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Hash</button>
                     </form>
                 </div>
                 @if (Session::has('hashed'))
